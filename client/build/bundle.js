@@ -22408,10 +22408,21 @@ module.exports = traverseAllChildren;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_GameGrid_jsx__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_GridOption_jsx__ = __webpack_require__(186);
+
 
 
 
 class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      options: [null, null, null, null, null, null, null, null, null],
+      player: "player1",
+      choice: "x"
+    };
+  }
 
   render() {
 
@@ -22423,11 +22434,7 @@ class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
         null,
         ' Yo I\'m a Message '
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1__components_GameGrid_jsx__["a" /* default */],
-        null,
-        ' Yo I\'m a Message '
-      )
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_GameGrid_jsx__["a" /* default */], { options: this.state.options })
     );
   }
 
@@ -22442,11 +22449,23 @@ class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__GridOption_jsx__ = __webpack_require__(186);
+
 
 
 class GameGrid extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
+
+    const gridPositions = this.props.options.map((option, index) => {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1__GridOption_jsx__["a" /* GridOption */],
+        { value: index, key: index },
+        ' ',
+        index,
+        ' '
+      );
+    });
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       null,
@@ -22454,13 +22473,38 @@ class GameGrid extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         'h3',
         null,
         ' I am a game grid '
-      )
+      ),
+      gridPositions
     );
   }
 
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (GameGrid);
+
+/***/ }),
+/* 186 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+const GridOption = props => {
+
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "option" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "h3",
+      null,
+      "I am whatever you want me to be"
+    )
+  );
+};
+/* harmony export (immutable) */ __webpack_exports__["a"] = GridOption;
+
 
 /***/ })
 /******/ ]);
