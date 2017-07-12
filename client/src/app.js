@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import GameContainer from './container/GameContainer.jsx'
 
 
 
 window.addEventListener('load', function () {
   ReactDOM.render(
-    <h3> Yo I'm a Message </h3>,
+    <GameContainer/>,
     document.getElementById('app')
   );
 });

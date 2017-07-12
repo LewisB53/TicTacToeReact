@@ -76,15 +76,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__container_GameContainer_jsx__ = __webpack_require__(184);
+
 
 
 
 window.addEventListener('load', function () {
-  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'h3',
-    null,
-    ' Yo I\'m a Message '
-  ), document.getElementById('app'));
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__container_GameContainer_jsx__["a" /* default */], null), document.getElementById('app'));
 });
 
 /***/ }),
@@ -22401,6 +22399,34 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 184 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+  render() {
+
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h3',
+        null,
+        ' Yo I\'m a Message '
+      )
+    );
+  }
+
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (GameContainer);
 
 /***/ })
 /******/ ]);
