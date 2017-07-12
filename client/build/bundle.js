@@ -22407,6 +22407,8 @@ module.exports = traverseAllChildren;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_GameGrid_jsx__ = __webpack_require__(185);
+
 
 
 class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
@@ -22420,6 +22422,11 @@ class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
         'h3',
         null,
         ' Yo I\'m a Message '
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1__components_GameGrid_jsx__["a" /* default */],
+        null,
+        ' Yo I\'m a Message '
       )
     );
   }
@@ -22427,6 +22434,33 @@ class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (GameContainer);
+
+/***/ }),
+/* 185 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+class GameGrid extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h3',
+        null,
+        ' I am a game grid '
+      )
+    );
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (GameGrid);
 
 /***/ })
 /******/ ]);
