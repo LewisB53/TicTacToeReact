@@ -22409,6 +22409,7 @@ module.exports = traverseAllChildren;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_GameGrid_jsx__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_GridOption_jsx__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_GridOption_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_GridOption_jsx__);
 
 
 
@@ -22455,11 +22456,16 @@ class GameContainer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
 
 class GameGrid extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
 
     const gridPositions = this.props.options.map((option, index) => {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1__GridOption_jsx__["a" /* GridOption */],
+        __WEBPACK_IMPORTED_MODULE_1__GridOption_jsx__["a" /* default */],
         { value: index, key: index },
         ' ',
         index,
@@ -22474,7 +22480,11 @@ class GameGrid extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         null,
         ' I am a game grid '
       ),
-      gridPositions
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'grid-wrapper' },
+        gridPositions
+      )
     );
   }
 
@@ -22491,20 +22501,47 @@ class GameGrid extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 
 
-const GridOption = props => {
+class GridOption extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "div",
-    { className: "option" },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "h3",
-      null,
-      "I am whatever you want me to be"
-    )
-  );
-};
-/* harmony export (immutable) */ __webpack_exports__["a"] = GridOption;
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: undefined,
+      showImage: false
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
+  handleChange(event) {
+    console.log("YAY!");
+    const newOption = event.target.value;
+    this.setState({
+      selectedOption: "X",
+      showImage: !this.state.showImage
+    });
+  }
+
+  render() {
+    let image = "";
+    // if(!this.props.option) return null
+    if (this.state.showImage) {
+      image = "x";
+    }
+
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      { className: "option", onClick: this.handleChange },
+      " ",
+      this.gridPositions,
+      " ",
+      this.selectedOption,
+      image
+    );
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (GridOption);
 
 /***/ })
 /******/ ]);

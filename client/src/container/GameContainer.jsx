@@ -1,6 +1,6 @@
 import React from 'react'
 import GameGrid from '../components/GameGrid.jsx'
-import {GridOption} from '../components/GridOption.jsx'
+import GridOption from '../components/GridOption.jsx'
 
 class GameContainer extends React.Component{
 
@@ -13,6 +13,7 @@ this.state = {
   choice: "x"
   }
 }
+
 
 render(){
 

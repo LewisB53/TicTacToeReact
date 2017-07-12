@@ -1,7 +1,13 @@
 import React from 'react'
-import {GridOption} from './GridOption.jsx'
+import GridOption from './GridOption.jsx'
 
 class GameGrid extends React.Component {
+
+  constructor(props){
+    super(props)
+    this.state={
+    }
+  }
 
   render() {
 
@@ -11,7 +17,9 @@ class GameGrid extends React.Component {
     return(
       <div> 
         <h3> I am a game grid </h3>
-        {gridPositions} 
+          <div id="grid-wrapper">
+            {gridPositions} 
+          </div>
       </div>
     )
   }

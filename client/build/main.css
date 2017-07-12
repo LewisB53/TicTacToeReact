@@ -1,5 +1,11 @@
-.option {
+.option{
   float: left;
 /*  margin: 20px ;*/
   border: 2px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+#grid-wrapper {
+  width: 320px; 
 }
